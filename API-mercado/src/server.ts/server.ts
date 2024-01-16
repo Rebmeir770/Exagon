@@ -6,7 +6,7 @@ import helmet from "helmet";
 
 // express declation
 const app = express();
-const PORT = 3000;
+
 
 dotenv.config();
 
@@ -26,6 +26,7 @@ app.get("/", (req: Request, res: Response) =>{
 
 
 // listen
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=> {console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 })
 
